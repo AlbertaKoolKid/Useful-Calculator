@@ -13,10 +13,9 @@ def clearline(n):
         print()         #print an empty line 
 
 def surarea():#this is the function for calculating surface area
-	print()
-	print("Here is a list of currently coded shapes. 'rectangle' 'circle' 'triangle'")
-	print()
-	print()
+	
+	print("/n Here is a list of currently coded shapes. 'rectangle' 'circle' 'triangle'") #this is a list of shapes that the program can calculate surface area for
+	clearline(3)
 	shape = input("What is the shape you are trying to calculate?   ")
 	print()
 	if shape == "rectangle":
