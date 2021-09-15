@@ -4,13 +4,13 @@ import math
 import random
 
 # define global variables
-running = False
+running = False # this variable is for the starting loop
 
 
 #define functions
 def clearline(n):
-    for x in range(n):
-        print()
+    for x in range(n):  #for every number between zero and the integer provided when calling the function
+        print()         #print an empty line 
 
 def surarea():#this is the function for calculating surface area
 	print()
@@ -111,15 +111,15 @@ def startup():
 	print()
 	funInput = funInput1.lower() #forcing the inputed string to become all lowercase
 	#the following if statement checks the given input against the available functions to be called.
-	if funInput == "percentage": #check if input is equal to the string if so
+	if funInput == "percentage" or "per": #check if input is equal to the string if so
 		percent()             #run the function
-	elif funInput == "surface area":
+	elif funInput == "surface area" or "sa":
 		surarea()
-	elif funInput == "fahrenheit":
+	elif funInput == "fahrenheit" or "fah":
 		fahrenheit()
-	elif funInput == "celsius":
+	elif funInput == "celsius" or "cel":
 		celsius()
-	elif funInput == "volume":
+	elif funInput == "volume" or "vol":
 		volume()
 	
 		
@@ -129,7 +129,7 @@ def startup():
 		clearline(10)
 		
 #start of the main loop and non function code		
-		
+
 	
 
 #startUp()
