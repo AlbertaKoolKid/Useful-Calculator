@@ -23,7 +23,7 @@ def surarea():#this is the function for calculating surface area
 		h = int(input("What is the height?   "))                                          #asks for the height of the rectangle
 		sa = str(l*h)                                                                     #how would one describe this line of code
 		
-		print("\n\nThe surface area of the rectangle is " + sa + " units squared.")
+		print("\n\nThe surface area of the rectangle is " + str(sa) + " units squared.")
 	
 	elif shape == "circle":
 		pi = 3.1415926
