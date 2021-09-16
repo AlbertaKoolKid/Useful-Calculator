@@ -15,10 +15,10 @@ def clearline(n):
 def surarea():#this is the function for calculating surface area
 	
 	print("/n Here is a list of currently coded shapes. 'rectangle' 'circle' 'triangle'") #this is a list of shapes that the program can calculate surface area for
-	clearline(3)
-	shape = input("What is the shape you are trying to calculate?   ")
+	clearline(3)                                                                          #this is a clearline 3
+	shape = input("What is the shape you are trying to calculate?   ")                    #asks for a shape to calculate
 	print()
-	if shape == "rectangle":
+	if shape == "rectangle":                                                                
 		l = int(input("What is the length?   "))
 		h = int(input("What is the height?   "))
 		sa = str(l*h)
@@ -127,7 +127,7 @@ def startup():
 		print("Unfortunatly this is not a valid option or not implemented yet, please let the author know")
 		clearline(10)
 		
-#start of the main loop and non function code		
+#start of the main loop and non function based code		
 
 	
 
@@ -135,3 +135,4 @@ def startup():
 print()
 print("Thanks for using my calculator. Enjoy your day!")
 
+ #print("This \n is a \n new line test \n\n\n 3lines") #this is the working new line comment
