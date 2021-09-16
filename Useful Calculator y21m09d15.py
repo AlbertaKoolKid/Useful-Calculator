@@ -37,7 +37,7 @@ def surarea():#this is the function for calculating surface area
 		h = int(input("What is the height of the triangle?   "))
 		a = b*h/2
 		print()
-		print("The surface area of the triangle is "+ a +" units squared.")
+		print("The surface area of the triangle is "+ str(a) +" units squared.")
 		
 	else:
 		print("This shape is not added yet please let the author know.")
