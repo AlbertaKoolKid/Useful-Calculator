@@ -18,12 +18,12 @@ def surarea():#this is the function for calculating surface area
 	clearline(3)                                                                          #this is a clearline 3
 	shape = input("What is the shape you are trying to calculate?   ")                    #asks for a shape to calculate
 	print()
-	if shape == "rectangle":                                                                
-		l = int(input("What is the length?   "))
-		h = int(input("What is the height?   "))
-		sa = str(l*h)
-		print()
-		print("The surface area is " + sa + " units squared.")
+	if shape == "rectangle":                                                              #checks if the shape is a rectangle  
+		l = int(input("What is the length?   "))                                          #asks for the length of the rectangle
+		h = int(input("What is the height?   "))                                          #asks for the height of the rectangle
+		sa = str(l*h)                                                                     #how would one describe this line of code
+		
+		print("\n\nThe surface area of the rectangle is " + sa + " units squared.")
 	
 	elif shape == "circle":
 		pi = 3.1415926
