@@ -53,12 +53,9 @@ def volume():
     if shape == "cube":
         l = int(input("What is your side length?   "))
         v = l**3
-        print()
-        print("The volume of this cube is " + str(v) +	 " units.")
-        print()
+        print("\n\nThe volume of this cube is " + str(v) +	 " units.\n\n")
     else:
-        print()
-        print("Not a valid option")
+        print("\n\nNot a valid option\n\n")
 
 
 def fahrenheit():
