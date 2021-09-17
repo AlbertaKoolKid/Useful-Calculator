@@ -3,8 +3,6 @@
 import math
 import random
 
-# define global variables
-#running = True # this variable is for the starting loop
 
 
 #define functions
@@ -115,5 +113,3 @@ def startup():
 startup()
 print()
 print("Thanks for using my calculator. Enjoy your day!")
-
- #print("This \n is a \n new line test \n\n\n 3lines") #this is the working new line comment
