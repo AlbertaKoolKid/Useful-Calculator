@@ -3,40 +3,32 @@
 import math
 import random
 
-
-
 #define functions
-def clearline(n):
+def clearline(n):       #this is the function for clearing lines
     for x in range(n):  #for every number between zero and the integer provided when calling the function
         print()         #print an empty line 
 
 def surarea():#this is the function for calculating surface area
 	
 	print("\n\n\nHere is a list of currently coded shapes.\n'rectangle' 'circle' 'triangle'\n\n\n") #this is a list of shapes that the program can calculate surface area for
-	shape = input("What is the shape you are trying to calculate?   ")                    #asks for a shape to calculate
-	if shape == "rectangle":                                                              #checks if the shape is a rectangle  
-		l = int(input("What is the length?   "))                                          #asks for the length of the rectangle
-		h = int(input("What is the height?   "))                                          #asks for the height of the rectangle
-		sa = l*h                                                                     #how would one describe this line of code
-		
-		print("\n\nThe surface area of the rectangle is " + str(sa) + " units squared.\n\n")
-	
-	elif shape == "circle":
-		pi = 3.1415926
-		r = int(input("What is the radius of the circle?   "))
-		sa = pi*r**2
-		print()
-		print("\n\nThe surface area of the circle is " + str(sa) + " units squared.\n\n")
-		
-	elif shape == "triangle":
-		b = int(input("What is the base of the triangle?   "))
-		h = int(input("What is the height of the triangle?   "))
-		a = b*h/2
-		print()
-		print("\n\nThe surface area of the triangle is "+ str(a) +" units squared.\n\n")
-		
-	else:
-		print("\n\nThis shape is not added yet please let the author know.\n\n")
+	shape = input("What is the shape you are trying to calculate?   ")                              #asks for a shape to calculate
+	if shape == "rectangle":                                                                        #checks if the shape is a rectangle  
+		l = int(input("What is the length?   "))                                                    #asks for the length of the rectangle
+		h = int(input("What is the height?   "))                                                    #asks for the height of the rectangle
+		sa = l*h                                                                                    #surface area equals length times height
+		print("\n\nThe surface area of the rectangle is " + str(sa) + " units squared.\n\n")        #print the answer in a formatted text
+	elif shape == "circle":                                                                         #checks if the shape is a circle
+		pi = math.pi                                                                                #this is pi 
+		r = int(input("What is the radius of the circle?   "))                                      #asks for the radius of the circle
+		sa = pi*(r**2)                                                                              #surface area equals pi x (radius squared)
+		print("\n\nThe surface area of the circle is " + str(sa) + " units squared.\n\n")           #print the answer in formatted text
+	elif shape == "triangle":                                                                       #checks if the shape is a triangle
+		b = int(input("What is the base of the triangle?   "))                                      #asks for the base of the triangle
+		h = int(input("What is the height of the triangle?   "))                                    #asks for the height of the triangle
+		a = b*h/2                                                                                   #area equals base times height divided by two
+		print("\n\nThe surface area of the triangle is "+ str(a) +" units squared.\n\n")            #print the answer in formatted text
+	else:                                                                                           #if the response didnt match any of the answers do the following
+		print("\n\nThis shape is not added yet please let the author know.\n\n")                    #Invalid text text
 		return
 
 def percent():
@@ -57,7 +49,6 @@ def volume():
     else:
         print("\n\nNot a valid option\n\n")
 
-
 def fahrenheit():
 	cel = int(input("What is the current degrees Celsius?   "))#gets current temperature and sets in to be an integer
 	fah = (cel*9/5)+32              #formula for calculating fahrenheit from celsius
@@ -77,13 +68,8 @@ def fractodec(): #not an easy formula.
 def startup():
     clearline(10) #this is a clear line fuction that takes an argument (n) and prints that many blank lines
     print("Welcome to the Useful Calculator.\nWith this program you will be able to calculate many different formulas to find your missing number.\n\n\n\nType 'surface area' to calcualte the surface area of different objects.\nType 'volume' to calculate the volume of different objects.\nType 'percentage' to calculate the percentage of the numbers you have.\nType 'fahrenheit' to calculate Fahrenheit from Celsius.\nType 'celsius' to calculate Celsius from Fahrenheit.\nType 'end' to quit the calculator and retrieve the save data.\n")
-    
     running = True
-    
     while running == True:
-    
-    
-    
         clearline(3)
         funInput1 = input("What would you like to do?   ") #asking for input
         funInput = funInput1.lower() #forcing the inputed string to become all lowercase
@@ -99,14 +85,10 @@ def startup():
             volume()
         elif funInput == "end" or funInput == "stop":
             running = False
-        
         else:                   #if the input does not match any valid strings it gets sent to here
             print("\n\nUnfortunatly this is not a valid option or not implemented yet, please let the author know.\n\n")
     
 #start of the main loop and non function based code		
-
-
-
 startup()
 print()
 print("Thanks for using my calculator. Enjoy your day!")
