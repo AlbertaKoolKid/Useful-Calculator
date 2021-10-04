@@ -5,6 +5,9 @@ import math
 import random
 
 #define functions
+def help():
+    print("AYYY I'm helping ere")
+    
 def clearline(n):       
     """This is the clear line function
     
@@ -48,7 +51,8 @@ def surarea():
               + str(a) 
               + " units squared.\n\n")            
     else:
-        print("\n\nThis shape is not added yet please let the author know.\n\n")
+        print("\n\nThis shape is not added yet please let the author know."
+              "\n\n")
         return
 
 def percent():
@@ -61,7 +65,13 @@ def percent():
     x = int(input("What is the number for the current positon?   "))
     y = int(input("What is the number for the total?   "))
     z = x*100/y
-    print("\n\n\nYou are currently " +str(z)+ " percent through.\nThe ratio is " +str(x)+ "/" +str(y)+ ".\n\n\n")
+    print("\n\n\nYou are currently "
+          +str(z)
+          + " percent through.\nThe ratio is " 
+          +str(x)
+          + "/" 
+          +str(y)
+          + ".\n\n\n")
     return
 
 def volume():
@@ -75,9 +85,9 @@ def volume():
         print("\n\nNot a valid option\n\n")
 
 def fahrenheit():
-    cel = int(input("What is the current degrees Celsius?   "))#gets current temperature and sets in to be an integer
-    fah = (cel*9/5)+32              #formula for calculating fahrenheit from celsius
-    print("\n\nIt is currently "+str(fah)+" degrees Fahrenheit.\n\n")  #prints the string with the interrjection of the output variable as a string
+    cel = int(input("What is the current degrees Celsius?   "))
+    fah = (cel*9/5)+32
+    print("\n\nIt is currently "+str(fah)+" degrees Fahrenheit.\n\n")
     return
 
 def celsius():
