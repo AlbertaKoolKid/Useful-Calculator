@@ -14,7 +14,6 @@ def clearline(n):
     for x in range(n):  
         print()
 
-<<<<<<< HEAD
 def surarea():
 	"""This is the function for calculating surface area. 
     
@@ -40,7 +39,6 @@ def surarea():
     else:                                                                                           #if the response didnt match any of the answers do the following
         print("\n\nThis shape is not added yet please let the author know.\n\n")                    #Invalid text text
         return
-=======
 def surarea():#this is the function for calculating surface area
 	
 	print("\n\n\nHere is a list of currently coded shapes.\n'rectangle' 'circle' 'triangle'\n\n\n") #this is a list of shapes that the program can calculate surface area for
@@ -63,7 +61,6 @@ def surarea():#this is the function for calculating surface area
 	else:                                                                                           #if the response didnt match any of the answers do the following
 		print("\n\nThis shape is not added yet please let the author know.\n\n")                    #Invalid text text
 		return
->>>>>>> 7ef208246e2401798036a1ac749e769ca6bf12e8
 
 def percent():
     print("\n\n\nThis works by taking a first number which is the position you are at and a second number which is the total amount of places.\nFor example if you entered the numbers 5 and 15 you would be shown that you are 33 percent through and the ratio is 5/15.\n\n\n")
