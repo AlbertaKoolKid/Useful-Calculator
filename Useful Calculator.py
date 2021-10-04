@@ -1,42 +1,77 @@
+#ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 #import required modules
 
 import math
 import random
 
 #define functions
-def clearline(n):       #this is the function for clearing lines
-    for x in range(n):  #for every number between zero and the integer provided when calling the function
-        print()         #print an empty line 
+def help():
+    print("AYYY I'm helping ere")
+    
+def clearline(n):       
+    """This is the clear line function
+    
+    This function takes an integer and prints that many blank lines in the 
+    window.
+    """
+    for x in range(n):  
+        print()
 
-def surarea():#this is the function for calculating surface area
-	
-	print("\n\n\nHere is a list of currently coded shapes.\n'rectangle' 'circle' 'triangle'\n\n\n") #this is a list of shapes that the program can calculate surface area for
-	shape = input("What is the shape you are trying to calculate?   ")                              #asks for a shape to calculate
-	if shape == "rectangle":                                                                        #checks if the shape is a rectangle  
-		l = int(input("What is the length?   "))                                                    #asks for the length of the rectangle
-		h = int(input("What is the height?   "))                                                    #asks for the height of the rectangle
-		sa = l*h                                                                                    #surface area equals length times height
-		print("\n\nThe surface area of the rectangle is " + str(sa) + " units squared.\n\n")        #print the answer in a formatted text
-	elif shape == "circle":                                                                         #checks if the shape is a circle
-		pi = math.pi                                                                                #this is pi 
-		r = int(input("What is the radius of the circle?   "))                                      #asks for the radius of the circle
-		sa = pi*(r**2)                                                                              #surface area equals pi x (radius squared)
-		print("\n\nThe surface area of the circle is " + str(sa) + " units squared.\n\n")           #print the answer in formatted text
-	elif shape == "triangle":                                                                       #checks if the shape is a triangle
-		b = int(input("What is the base of the triangle?   "))                                      #asks for the base of the triangle
-		h = int(input("What is the height of the triangle?   "))                                    #asks for the height of the triangle
-		a = b*h/2                                                                                   #area equals base times height divided by two
-		print("\n\nThe surface area of the triangle is "+ str(a) +" units squared.\n\n")            #print the answer in formatted text
-	else:                                                                                           #if the response didnt match any of the answers do the following
-		print("\n\nThis shape is not added yet please let the author know.\n\n")                    #Invalid text text
-		return
+def surarea():
+    """This is the function for calculating surface area. 
+    
+    This function will calculate the surface area of a handful of different 
+    objects. It is self contained and doesn't referenct outside functions.
+    """
+    
+    print("\n\n\nHere is a list of currently coded shapes.\n"
+          "'rectangle' 'circle' 'triangle' \n\n")
+    shape = input("What is the shape you are trying to calculate?   ")
+    
+    if shape == "rectangle": 
+        l = int(input("What is the length?   "))
+        h = int(input("What is the height?   "))
+        sa = l*h
+        print("\n\nThe surface area of the rectangle is " 
+              + str(sa) 
+              + " units squared.\n\n")        
+    
+    elif shape == "circle":                                                                         
+        pi = math.pi
+        r = int(input("What is the radius of the circle?   "))
+        sa = pi*(r**2)
+        print("\n\nThe surface area of the circle is " 
+              + str(sa) 
+              + " units squared.\n\n")           
+    elif shape == "triangle":
+        b = int(input("What is the base of the triangle?   "))
+        h = int(input("What is the height of the triangle?   "))
+        a = b*h/2
+        print("\n\nThe surface area of the triangle is "
+              + str(a) 
+              + " units squared.\n\n")            
+    else:
+        print("\n\nThis shape is not added yet please let the author know."
+              "\n\n")
+        return
 
 def percent():
-    print("\n\n\nThis works by taking a first number which is the position you are at and a second number which is the total amount of places.\nFor example if you entered the numbers 5 and 15 you would be shown that you are 33 percent through and the ratio is 5/15.\n\n\n")
+    print("\n\n\nThis works by taking a first number which is the "
+          "position you are at,\n"
+          "and a second number which is the total amount of places.\n\n"
+          "For example if you entered the numbers 5 and 15 you would"
+          "be shown that \n"
+          "you are 33 percent through and the ratio is 5/15.\n\n\n")
     x = int(input("What is the number for the current positon?   "))
     y = int(input("What is the number for the total?   "))
     z = x*100/y
-    print("\n\n\nYou are currently " +str(z)+ " percent through.\nThe ratio is " +str(x)+ "/" +str(y)+ ".\n\n\n")
+    print("\n\n\nYou are currently "
+          +str(z)
+          + " percent through.\nThe ratio is " 
+          +str(x)
+          + "/" 
+          +str(y)
+          + ".\n\n\n")
     return
 
 def volume():
@@ -50,24 +85,36 @@ def volume():
         print("\n\nNot a valid option\n\n")
 
 def fahrenheit():
-	cel = int(input("What is the current degrees Celsius?   "))#gets current temperature and sets in to be an integer
-	fah = (cel*9/5)+32              #formula for calculating fahrenheit from celsius
-	print("\n\nIt is currently "+str(fah)+" degrees Fahrenheit.\n\n")  #prints the string with the interrjection of the output variable as a string
-	return
+    cel = int(input("What is the current degrees Celsius?   "))
+    fah = (cel*9/5)+32
+    print("\n\nIt is currently "+str(fah)+" degrees Fahrenheit.\n\n")
+    return
 
 def celsius():
-	fah = int(input("What is the current degrees Fahrenheit?   ")) #gets current teperature and sets in be an integer
-	cel = (fah-32)*5/9 #formula to calculate celcius from fahrenheit
-	print("\n\nIt is currently "+str(cel)+" degrees Celsius\n\n") #prints the string with the interjection of the output variable as a string
-	return
+    fah = int(input("What is the current degrees Fahrenheit?   ")) #gets current teperature and sets in be an integer
+    cel = (fah-32)*5/9 #formula to calculate celcius from fahrenheit
+    print("\n\nIt is currently "+str(cel)+" degrees Celsius\n\n") #prints the string with the interjection of the output variable as a string
+    return
 
 def fractodec(): #not an easy formula. 
-	print ("not yet implemented")
-	return
+    print ("not yet implemented")
+    return
 
 def startup():
-    clearline(10) #this is a clear line fuction that takes an argument (n) and prints that many blank lines
-    print("Welcome to the Useful Calculator.\nWith this program you will be able to calculate many different formulas to find your missing number.\n\n\n\nType 'surface area' to calcualte the surface area of different objects.\nType 'volume' to calculate the volume of different objects.\nType 'percentage' to calculate the percentage of the numbers you have.\nType 'fahrenheit' to calculate Fahrenheit from Celsius.\nType 'celsius' to calculate Celsius from Fahrenheit.\nType 'end' to quit the calculator and retrieve the save data.\n")
+    """Here lies the main menu
+    
+    """
+    clearline(10)
+    print("Welcome to the Useful Calculator.\n"
+          "With this program you will be able to calculate many different "
+          "formulas to find your missing number.\n\n\n"
+          "Type 'surface area' to calcualte the surface area of different objects.\n"
+          "Type 'volume' to calculate the volume of different objects.\n"
+          "Type 'percentage' to calculate the percentage of the numbers you have.\n"
+          "Type 'fahrenheit' to calculate Fahrenheit from Celsius.\n"
+          "Type 'celsius' to calculate Celsius from Fahrenheit.\n"
+          "Type 'end' to quit the calculator and retrieve the save data.\n"
+          )
     running = True
     while running == True:
         clearline(3)
@@ -92,3 +139,6 @@ def startup():
 startup()
 print()
 print("Thanks for using my calculator. Enjoy your day!")
+
+
+
