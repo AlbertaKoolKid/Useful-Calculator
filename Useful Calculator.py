@@ -17,50 +17,30 @@ def clearline(n):
 def surarea():
 	"""This is the function for calculating surface area. 
     
+    This function will calculate the surface area of a handful of different 
+    objects. It is self contained and doesn't referenct outside functions.
     """
     print("\n\n\nHere is a list of currently coded shapes.")
     print("'rectangle' 'circle' 'triangle'. \n\n\")
     shape = input("What is the shape you are trying to calculate?   ")
     if shape == "rectangle": 
-        l = int(input("What is the length?   "))                                                    #asks for the length of the rectangle
-        h = int(input("What is the height?   "))                                                    #asks for the height of the rectangle
-        sa = l*h                                                                                    #surface area equals length times height
-        print("\n\nThe surface area of the rectangle is " + str(sa) + " units squared.\n\n")        #print the answer in a formatted text
-    elif shape == "circle":                                                                         #checks if the shape is a circle
-        pi = math.pi                                                                                #this is pi 
-        r = int(input("What is the radius of the circle?   "))                                      #asks for the radius of the circle
-        sa = pi*(r**2)                                                                              #surface area equals pi x (radius squared)
-        print("\n\nThe surface area of the circle is " + str(sa) + " units squared.\n\n")           #print the answer in formatted text
-    elif shape == "triangle":                                                                       #checks if the shape is a triangle
-        b = int(input("What is the base of the triangle?   "))                                      #asks for the base of the triangle
-        h = int(input("What is the height of the triangle?   "))                                    #asks for the height of the triangle
-        a = b*h/2                                                                                   #area equals base times height divided by two
-        print("\n\nThe surface area of the triangle is "+ str(a) +" units squared.\n\n")            #print the answer in formatted text
-    else:                                                                                           #if the response didnt match any of the answers do the following
-        print("\n\nThis shape is not added yet please let the author know.\n\n")                    #Invalid text text
+        l = int(input("What is the length?   "))                                                    
+        h = int(input("What is the height?   "))                                                    
+        sa = l*h                                                                                    
+        print("\n\nThe surface area of the rectangle is " + str(sa) + " units squared.\n\n")        
+    elif shape == "circle":                                                                         
+        pi = math.pi                                                                                 
+        r = int(input("What is the radius of the circle?   "))                                      
+        sa = pi*(r**2)                                                                              
+        print("\n\nThe surface area of the circle is " + str(sa) + " units squared.\n\n")           
+    elif shape == "triangle":                                                                       
+        b = int(input("What is the base of the triangle?   "))                                      
+        h = int(input("What is the height of the triangle?   "))                                    
+        a = b*h/2                                                                                   
+        print("\n\nThe surface area of the triangle is "+ str(a) +" units squared.\n\n")            
+    else:                                                                                           
+        print("\n\nThis shape is not added yet please let the author know.\n\n")                    
         return
-def surarea():#this is the function for calculating surface area
-	
-	print("\n\n\nHere is a list of currently coded shapes.\n'rectangle' 'circle' 'triangle'\n\n\n") #this is a list of shapes that the program can calculate surface area for
-    shape = input("What is the shape you are trying to calculate?   ")                              #asks for a shape to calculate
-	if shape == "rectangle":                                                                        #checks if the shape is a rectangle  
-	    l = int(input("What is the length?   "))                                                    #asks for the length of the rectangle
-	    h = int(input("What is the height?   "))                                                    #asks for the height of the rectangle
-	    sa = l*h                                                                                    #surface area equals length times height
-		print("\n\nThe surface area of the rectangle is " + str(sa) + " units squared.\n\n")        #print the answer in a formatted text
-	elif shape == "circle":                                                                         #checks if the shape is a circle
-	    pi = math.pi                                                                                #this is pi 
-	    r = int(input("What is the radius of the circle?   "))                                      #asks for the radius of the circle
-	    sa = pi*(r**2)                                                                              #surface area equals pi x (radius squared)
-		print("\n\nThe surface area of the circle is " + str(sa) + " units squared.\n\n")           #print the answer in formatted text
-	elif shape == "triangle":                                                                       #checks if the shape is a triangle
-	    b = int(input("What is the base of the triangle?   "))                                      #asks for the base of the triangle
-	    h = int(input("What is the height of the triangle?   "))                                    #asks for the height of the triangle
-	    a = b*h/2                                                                                   #area equals base times height divided by two
-		print("\n\nThe surface area of the triangle is "+ str(a) +" units squared.\n\n")            #print the answer in formatted text
-	else:                                                                                           #if the response didnt match any of the answers do the following
-		print("\n\nThis shape is not added yet please let the author know.\n\n")                    #Invalid text text
-		return
 
 def percent():
     print("\n\n\nThis works by taking a first number which is the position you are at and a second number which is the total amount of places.\nFor example if you entered the numbers 5 and 15 you would be shown that you are 33 percent through and the ratio is 5/15.\n\n\n")
