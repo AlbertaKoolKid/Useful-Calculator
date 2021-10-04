@@ -11,21 +11,21 @@ def clearline(n):       #this is the function for clearing lines
 def surarea():#this is the function for calculating surface area
 	
 	print("\n\n\nHere is a list of currently coded shapes.\n'rectangle' 'circle' 'triangle'\n\n\n") #this is a list of shapes that the program can calculate surface area for
-    shape = input("What is the shape you are trying to calculate?   ")                              #asks for a shape to calculate
+	shape = input("What is the shape you are trying to calculate?   ")                              #asks for a shape to calculate
 	if shape == "rectangle":                                                                        #checks if the shape is a rectangle  
-	    l = int(input("What is the length?   "))                                                    #asks for the length of the rectangle
-	    h = int(input("What is the height?   "))                                                    #asks for the height of the rectangle
-	    sa = l*h                                                                                    #surface area equals length times height
+		l = int(input("What is the length?   "))                                                    #asks for the length of the rectangle
+		h = int(input("What is the height?   "))                                                    #asks for the height of the rectangle
+		sa = l*h                                                                                    #surface area equals length times height
 		print("\n\nThe surface area of the rectangle is " + str(sa) + " units squared.\n\n")        #print the answer in a formatted text
 	elif shape == "circle":                                                                         #checks if the shape is a circle
-	    pi = math.pi                                                                                #this is pi 
-	    r = int(input("What is the radius of the circle?   "))                                      #asks for the radius of the circle
-	    sa = pi*(r**2)                                                                              #surface area equals pi x (radius squared)
+		pi = math.pi                                                                                #this is pi 
+		r = int(input("What is the radius of the circle?   "))                                      #asks for the radius of the circle
+		sa = pi*(r**2)                                                                              #surface area equals pi x (radius squared)
 		print("\n\nThe surface area of the circle is " + str(sa) + " units squared.\n\n")           #print the answer in formatted text
 	elif shape == "triangle":                                                                       #checks if the shape is a triangle
-	    b = int(input("What is the base of the triangle?   "))                                      #asks for the base of the triangle
-	    h = int(input("What is the height of the triangle?   "))                                    #asks for the height of the triangle
-	    a = b*h/2                                                                                   #area equals base times height divided by two
+		b = int(input("What is the base of the triangle?   "))                                      #asks for the base of the triangle
+		h = int(input("What is the height of the triangle?   "))                                    #asks for the height of the triangle
+		a = b*h/2                                                                                   #area equals base times height divided by two
 		print("\n\nThe surface area of the triangle is "+ str(a) +" units squared.\n\n")            #print the answer in formatted text
 	else:                                                                                           #if the response didnt match any of the answers do the following
 		print("\n\nThis shape is not added yet please let the author know.\n\n")                    #Invalid text text
@@ -50,14 +50,14 @@ def volume():
         print("\n\nNot a valid option\n\n")
 
 def fahrenheit():
-    cel = int(input("What is the current degrees Celsius?   "))#gets current temperature and sets in to be an integer
-    fah = (cel*9/5)+32              #formula for calculating fahrenheit from celsius
+	cel = int(input("What is the current degrees Celsius?   "))#gets current temperature and sets in to be an integer
+	fah = (cel*9/5)+32              #formula for calculating fahrenheit from celsius
 	print("\n\nIt is currently "+str(fah)+" degrees Fahrenheit.\n\n")  #prints the string with the interrjection of the output variable as a string
 	return
 
 def celsius():
-    fah = int(input("What is the current degrees Fahrenheit?   ")) #gets current teperature and sets in be an integer
-    cel = (fah-32)*5/9 #formula to calculate celcius from fahrenheit
+	fah = int(input("What is the current degrees Fahrenheit?   ")) #gets current teperature and sets in be an integer
+	cel = (fah-32)*5/9 #formula to calculate celcius from fahrenheit
 	print("\n\nIt is currently "+str(cel)+" degrees Celsius\n\n") #prints the string with the interjection of the output variable as a string
 	return
 
