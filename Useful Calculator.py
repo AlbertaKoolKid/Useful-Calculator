@@ -9,8 +9,8 @@ def help():
     print("AYYY I'm helping ere")
     
 def clearline(n):       
-    """This is the clear line function
-    
+    """
+    This is the clear line function
     This function takes an integer and prints that many blank lines in the 
     window.
     """
